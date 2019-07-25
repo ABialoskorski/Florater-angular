@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+body {
+  background-image: url("./background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  font-family: Roboto, "Chakra Petch", sans-serif;
+}
+nav {
+  a:hover {
+    color: goldenrod;
+  }
+  a.active {
+    color: #039be5;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}

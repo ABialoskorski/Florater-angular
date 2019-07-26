@@ -6,7 +6,7 @@ import { User } from "./user";
   providedIn: "root",
 })
 export class EnrollmentService {
-  _url = "https://kfsz.pythonanywhere.com/api/users/register/";
+  _url = "https://kfsz.pythonanywhere.com/api/users/user-data/";
   constructor(private _http: HttpClient) {}
   enroll(user: User) {
     return this._http.post<any>(this._url, user);

@@ -1,0 +1,34 @@
+<div class="login">
+  <form
+    #userForm="ngForm"
+    (ngSubmit)="onSubmit()"
+    class="login__inputCollection"
+  >
+    {{ userForm.value | json }}
+    <input
+      [(ngModel)]="userModel.email"
+      class="login__input"
+      name="email"
+      type="text"
+      label="email"
+      placeholder="E-Mail"
+    />
+    <input
+      [(ngModel)]="userModel.password"
+      class="login__input"
+      name="password"
+      type="password"
+      label="password"
+      placeholder="Hasło"
+    />
+  </form>
+  <div class="login__buttons">
+    <button class="login__send" (click)="onSubmit()">
+      Zaloguj się
+    </button>
+  </div>
+  <p class="login__register">
+    Nie posiadasz jeszcze konta?
+    <a routerLink="/register">Zarejestuj się</a>
+  </p>
+</div>

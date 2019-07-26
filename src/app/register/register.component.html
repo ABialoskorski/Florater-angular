@@ -1,0 +1,47 @@
+<div class="register">
+  <form
+    #userForm="ngForm"
+    (ngSubmit)="onSubmit()"
+    class="register__inputCollection"
+    *ngIf="!submitted"
+  >
+    {{ userForm.value | json }}
+    <input
+      [(ngModel)]="userModel.first_name"
+      class="register__input"
+      name="first_name"
+      type="text"
+      label="first_name"
+      placeholder="first_name"
+    />
+    <input
+      [(ngModel)]="userModel.last_name"
+      class="register__input"
+      name="last_name"
+      type="last_name"
+      label="last_name"
+      placeholder="last_name"
+    />
+    <input
+      [(ngModel)]="userModel.email"
+      class="register__input"
+      name="email"
+      type="text"
+      label="email"
+      placeholder="E-Mail"
+    />
+    <input
+      [(ngModel)]="userModel.password"
+      class="register__input"
+      name="password"
+      type="password"
+      label="password"
+      placeholder="password"
+    />
+  </form>
+  <div class="register__buttons">
+    <button class="register__send" (click)="onSubmit()">
+      Zarejestruj się
+    </button>
+  </div>
+</div>
